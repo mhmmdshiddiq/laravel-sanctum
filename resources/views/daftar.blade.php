@@ -76,35 +76,36 @@
               <div class="card-body p-4 p-sm-5">
                 <div class="row flex-between-center mb-2">
                   <div class="col-auto">
-                    <h5>Log in</h5>
+                    <h5>Register</h5>
                   </div>
-                  <div class="col-auto fs--1 text-600"><span class="mb-0 undefined">or</span> <span><a href="/api/registerUser">Create an account</a></span></div>
+                  <div class="col-auto fs--1 text-600"><span class="mb-0 undefined">Have an account?</span> <span><a href="pages/authentication/simple/login.html">Login</a></span></div>
                 </div>
-                <form method="GET" action="{{url('api')}}">
-                  @csrf
-
+                <form method="POST" action="#">
                   <div class="mb-3">
-                    <input class="form-control" type="email" placeholder="Email address" />
+                    <input class="form-control" type="text" autocomplete="on" placeholder="Name" />
                   </div>
                   <div class="mb-3">
-                    <input class="form-control" type="password" placeholder="Password" />
+                    <input class="form-control" type="email" autocomplete="on" placeholder="Email address" />
                   </div>
-                  <div class="row flex-between-center">
-                    <div class="col-auto">
-                      <div class="form-check mb-0">
-                        <input class="form-check-input" type="checkbox" id="basic-checkbox" checked="checked" />
-                        <label class="form-check-label mb-0" for="basic-checkbox">Remember me</label>
-                      </div>
+                  <div class="row gx-2">
+                    <div class="mb-3 col-sm-6">
+                      <input class="form-control" type="password" autocomplete="on" placeholder="Password" />
                     </div>
-                    <div class="col-auto"><a class="fs--1" href="pages/authentication/simple/forgot-password.html">Forgot Password?</a></div>
+                    <div class="mb-3 col-sm-6">
+                      <input class="form-control" type="password" autocomplete="on" placeholder="Confirm Password" />
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="basic-register-checkbox" />
+                    <label class="form-label" for="basic-register-checkbox">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label>
                   </div>
                   <div class="mb-3">
-                    <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Log in</button>
+                    <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Register</button>
                   </div>
                 </form>
                 <div class="position-relative mt-4">
                   <hr />
-                  <div class="divider-content-center">or log in with</div>
+                  <div class="divider-content-center">or register with</div>
                 </div>
                 <div class="row g-2 mt-2">
                   <div class="col-sm-6"><a class="btn btn-outline-google-plus btn-sm d-block w-100" href="#"><span class="fab fa-google-plus-g me-2" data-fa-transform="grow-8"></span> google</a></div>

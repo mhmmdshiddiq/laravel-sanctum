@@ -28,6 +28,7 @@ Route::get('/', function(){
     ], 401);
 })->name('login');
 
+// Route::get('/', [AuthController::class, 'index']);
 Route::get('product', [ProductController::class, 'index'])->middleware('auth:sanctum');
 Route::post('registerUser', [AuthController::class, 'registerUser']);
 Route::post('loginUser', [AuthController::class, 'loginUser']);

@@ -12,6 +12,7 @@ class AuthController extends Controller
 {
    public function registerUser(Request $request){
 
+    // return view('welcome');
     $datauser = new User();
     $rules = [
         'name'=>'required',
@@ -70,5 +71,9 @@ class AuthController extends Controller
         'message'=>'berhasil proses login',
         'token'=>$datauser->createToken('api-product')->plainTextToken,
     ]);
+   }
+
+   public function index(){
+    return view('login');
    }
 }
